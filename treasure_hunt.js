@@ -89,7 +89,7 @@ function getAnswerAndValidate(answer) {
 function printPuzzleMessage(puzzle) {
   console.log(PUZZLE_SEPERATOR);
   console.log("This is the second part of the quest !!");
-  console.log("Solve this puzzle, using answer for the previous one ~");
+  console.log("Solve this puzzle, using answer from the previous one ~");
   console.log("The puzzle is : \n", puzzle);
 }
 
@@ -99,6 +99,9 @@ function askPuzzle(puzzle, puzzleAnswer) {
 }
 
 function askQuestion(question, answer, puzzle, puzzleAnswer) {
+  console.clear();
+  
+  printInstructionMessage();
   const decoration = "🍊 Player our secret hint is: \n\n ";
   console.log(decoration, '┈┈┈┈✿', question, '✿┈┈┈┈');
   console.log("\nFind the secret key and go to next Level\n");
@@ -114,8 +117,7 @@ function askEasyQuestions() {
 
 function startEasyLevel() {
   console.log("I see you have started the game alright go one then !\n");
-  prompt("Now you are in Easy level, let's start the game\n\n");
-
+  prompt("Now you are in Easy level, let's start the game\n\n(press enter)");
   askEasyQuestions();
 }
 
@@ -135,6 +137,7 @@ function printInstructionMessage() {
 }
 
 function congratulatePlayer() {
+  console.clear();
   console.log("ʏᴏᴜ ʜᴀᴠᴇ ꜰᴏᴜɴᴅ ᴀʟʟ ᴛʜᴇ ᴀɴꜱᴡᴇʀ.");
   prompt("ᴡᴇʟʟ ᴅᴏɴᴇ! ɴᴏᴡ ꜰᴏʀ ʏᴏᴜʀ ᴛʀᴇᴀꜱᴜʀᴇ ᴘʀᴇꜱꜱ ᴇɴᴛᴇʀ...\n");
   console.log(QUOTE_ONE_PIECE);
